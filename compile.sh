@@ -29,6 +29,7 @@ then
 	fi
 
 # compile in silent mode
+# fcompare-debug-second : no note
 else
 	g++ "$1" -w -fcompare-debug-second -o a.out
 	./a.out
