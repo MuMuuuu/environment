@@ -11,6 +11,7 @@ endif
 set t_Co=256
 let g:colors_name = "darkblack"
 
+
 "hi SignColumn -- no settings --
 "hi TabLineSel -- no settings --
 "hi CTagsMember -- no settings --
@@ -36,7 +37,10 @@ hi CursorLine gui=underline guibg=#4b4b4b
 "hi CTagsClass -- no settings --
 "hi TabLine -- no settings --
 "hi clear -- no settings --
-hi IncSearch guifg=#000000 guibg=#bebebe guisp=#bebebe gui=NONE ctermfg=NONE ctermbg=7 cterm=NONE
+"TODO
+hi IncSearch guifg=#FFE787 guibg=#9b5000 guisp=#bebebe gui=italic ctermfg=NONE ctermbg=7 cterm=NONE
+hi Search guifg=#ffffff guibg=#757575 guisp=#000000 gui=italic ctermfg=15 ctermbg=NONE cterm=underline
+"hi Search guifg=#ffffff guibg=#a70000 guisp=#000000 gui=underline,italic ctermfg=15 ctermbg=NONE cterm=underline
 hi WildMenu guifg=#ffff00 guibg=#000000 guisp=#000000 gui=NONE ctermfg=11 ctermbg=NONE cterm=NONE
 hi SpecialComment guifg=#ffa500 guibg=NONE guisp=NONE gui=NONE ctermfg=214 ctermbg=NONE cterm=NONE
 hi Typedef guifg=#00ff00 guibg=NONE guisp=NONE gui=NONE ctermfg=10 ctermbg=NONE cterm=NONE
@@ -44,7 +48,7 @@ hi Title guifg=#ff00ff guibg=NONE guisp=NONE gui=bold ctermfg=201 ctermbg=NONE c
 hi Folded guifg=#a9a9a9 guibg=#000000 guisp=#000000 gui=bold ctermfg=248 ctermbg=NONE cterm=bold
 hi PreCondit guifg=#ff00ff guibg=NONE guisp=NONE gui=NONE ctermfg=201 ctermbg=NONE cterm=NONE
 hi Include guifg=#ff00ff guibg=NONE guisp=NONE gui=NONE ctermfg=201 ctermbg=NONE cterm=NONE
-hi StatusLineNC guifg=#000000 guibg=#a9a9a9 guisp=#a9a9a9 gui=NONE ctermfg=NONE ctermbg=248 cterm=NONE
+hi StatusLineNC guifg=#000000 guibg=#727272 guisp=#a9a9a9 gui=NONE ctermfg=NONE ctermbg=248 cterm=NONE
 hi NonText guifg=#e0ffff guibg=NONE guisp=NONE gui=NONE ctermfg=195 ctermbg=NONE cterm=NONE
 hi DiffText guifg=NONE guibg=#ff0000 guisp=#ff0000 gui=bold ctermfg=NONE ctermbg=196 cterm=bold
 hi ErrorMsg guifg=#ffffff guibg=#f131f1 guisp=#add8e6 gui=NONE ctermfg=15 ctermbg=152 cterm=NONE
@@ -53,7 +57,7 @@ hi Debug guifg=#ffa500 guibg=NONE guisp=NONE gui=NONE ctermfg=214 ctermbg=NONE c
 hi PMenuSbar guifg=NONE guibg=#848688 guisp=#848688 gui=NONE ctermfg=NONE ctermbg=102 cterm=NONE
 hi Identifier guifg=#00ffff guibg=NONE guisp=NONE gui=NONE ctermfg=14 ctermbg=NONE cterm=NONE
 hi SpecialChar guifg=#ffa500 guibg=NONE guisp=NONE gui=NONE ctermfg=214 ctermbg=NONE cterm=NONE
-hi Conditional guifg=#00ff00 guibg=NONE guisp=NONE gui=NONE ctermfg=10 ctermbg=NONE cterm=NONE
+hi Conditional guifg=#06ffd9 guibg=NONE guisp=NONE gui=NONE ctermfg=10 ctermbg=NONE cterm=NONE
 hi StorageClass guifg=#00ff00 guibg=NONE guisp=NONE gui=NONE ctermfg=10 ctermbg=NONE cterm=NONE
 hi Todo guifg=#000000 guibg=#ffff00 guisp=#000000 gui=NONE ctermfg=196 ctermbg=NONE cterm=NONE
 hi Special guifg=#ffa500 guibg=NONE guisp=NONE gui=NONE ctermfg=214 ctermbg=NONE cterm=NONE
@@ -61,12 +65,11 @@ hi LineNr guifg=#00ff00 guibg=NONE guisp=NONE gui=NONE ctermfg=10 ctermbg=NONE c
 hi StatusLine guifg=#add8e6 guibg=#a9a9a9 guisp=#a9a9a9 gui=NONE ctermfg=152 ctermbg=248 cterm=NONE
 hi Label guifg=#00ff00 guibg=NONE guisp=NONE gui=NONE ctermfg=10 ctermbg=NONE cterm=NONE
 hi PMenuSel guifg=#add8e6 guibg=#a9a9a9 guisp=#a9a9a9 gui=NONE ctermfg=152 ctermbg=248 cterm=NONE
-hi Search guifg=#ffffff guibg=#000000 guisp=#000000 gui=underline ctermfg=15 ctermbg=NONE cterm=underline
 hi Delimiter guifg=#ffa500 guibg=NONE guisp=NONE gui=NONE ctermfg=214 ctermbg=NONE cterm=NONE
 hi Statement guifg=#ffff00 guibg=NONE guisp=NONE gui=NONE ctermfg=11 ctermbg=NONE cterm=NONE
-hi Comment guifg=#10d7cb guibg=NONE guisp=NONE gui=italic ctermfg=152 ctermbg=NONE cterm=NONE
+hi Comment guifg=#009c93 guibg=NONE guisp=NONE gui=italic ctermfg=152 ctermbg=NONE cterm=NONE
 hi Character guifg=#ff00ff guibg=NONE guisp=NONE gui=NONE ctermfg=201 ctermbg=NONE cterm=NONE
-hi Number guifg=#ff00ff guibg=NONE guisp=NONE gui=NONE ctermfg=201 ctermbg=NONE cterm=NONE
+hi Number guifg=#ef2d56 guibg=NONE guisp=NONE gui=NONE ctermfg=201 ctermbg=NONE cterm=NONE
 hi Boolean guifg=#ffff00 guibg=NONE guisp=NONE gui=NONE ctermfg=11 ctermbg=NONE cterm=NONE
 hi Operator guifg=#00ff00 guibg=NONE guisp=NONE gui=NONE ctermfg=10 ctermbg=NONE cterm=NONE
 hi Question guifg=#00ff00 guibg=NONE guisp=NONE gui=NONE ctermfg=10 ctermbg=NONE cterm=NONE
@@ -78,7 +81,7 @@ hi Define guifg=#ff00ff guibg=NONE guisp=NONE gui=NONE ctermfg=201 ctermbg=NONE 
 hi Function guifg=#00eaff guibg=NONE guisp=NONE gui=NONE ctermfg=14 ctermbg=NONE cterm=NONE
 hi FoldColumn guifg=#a9a9a9 guibg=#000000 guisp=#000000 gui=bold ctermfg=248 ctermbg=NONE cterm=bold
 hi PreProc guifg=#ff00ff guibg=NONE guisp=NONE gui=NONE ctermfg=201 ctermbg=NONE cterm=NONE
-hi Visual guifg=#add8e6 guibg=#d3d3d3 guisp=#d3d3d3 gui=NONE ctermfg=152 ctermbg=252 cterm=NONE
+hi Visual guifg=#d8711e guibg=#c5c5c5 guisp=#c5c5c5 gui=NONE ctermfg=152 ctermbg=252 cterm=NONE
 hi MoreMsg guifg=#006400 guibg=NONE guisp=NONE gui=NONE ctermfg=22 ctermbg=NONE cterm=NONE
 hi VertSplit guifg=#000000 guibg=#a9a9a9 guisp=#a9a9a9 gui=NONE ctermfg=NONE ctermbg=248 cterm=NONE
 hi Exception guifg=#00ff00 guibg=NONE guisp=NONE gui=NONE ctermfg=10 ctermbg=NONE cterm=NONE
@@ -92,7 +95,7 @@ hi Constant guifg=#ff00ff guibg=NONE guisp=NONE gui=NONE ctermfg=201 ctermbg=NON
 hi Tag guifg=#ffa500 guibg=NONE guisp=NONE gui=NONE ctermfg=214 ctermbg=NONE cterm=NONE
 hi String guifg=#ff00ff guibg=NONE guisp=NONE gui=NONE ctermfg=201 ctermbg=NONE cterm=NONE
 hi PMenuThumb guifg=NONE guibg=#00ff00 guisp=#00ff00 gui=NONE ctermfg=NONE ctermbg=10 cterm=NONE
-hi Repeat guifg=#00ff00 guibg=NONE guisp=NONE gui=NONE ctermfg=10 ctermbg=NONE cterm=NONE
+hi Repeat guifg=#06ffd9 guibg=NONE guisp=NONE gui=NONE ctermfg=10 ctermbg=NONE cterm=NONE
 hi Directory guifg=#00ffff guibg=NONE guisp=NONE gui=NONE ctermfg=14 ctermbg=NONE cterm=NONE
 hi Structure guifg=#00ff00 guibg=NONE guisp=NONE gui=NONE ctermfg=10 ctermbg=NONE cterm=NONE
 hi Macro guifg=#ff00ff guibg=NONE guisp=NONE gui=NONE ctermfg=201 ctermbg=NONE cterm=NONE
@@ -110,4 +113,3 @@ hi user3 guifg=#00ff00 guibg=#0000df guisp=#0000df gui=NONE ctermfg=10 ctermbg=2
 hi user1 guifg=#ffffff guibg=#0000df guisp=#0000df gui=NONE ctermfg=15 ctermbg=20 cterm=NONE
 hi taglistfilename guifg=#ffffff guibg=#870087 guisp=#870087 gui=NONE ctermfg=15 ctermbg=90 cterm=NONE
 hi taglisttagscope guifg=#000000 guibg=#008700 guisp=#008700 gui=NONE ctermfg=NONE ctermbg=28 cterm=NONE
-

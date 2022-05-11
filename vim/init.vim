@@ -1,6 +1,10 @@
+filetype plugin on
+filetype on
+syntax on
+
 set relativenumber number
-set cursorline
 set hlsearch incsearch 
+set cursorline
 set tabstop=4 softtabstop=4 shiftwidth=4 expandtab
 set encoding=utf-8
 setglobal fileencoding=utf-8
@@ -9,9 +13,9 @@ set showcmd
 set noshowmode
 set mouse=a
 
-" autocomplete quote
+" auto pair
 inoremap ( ()<ESC>i
-inoremap {{ {}<ESC>i
+inoremap {<space> {}<ESC>i
 inoremap {<CR> {<CR>}<ESC>ko
 inoremap [ []<ESC>i
 inoremap " ""<ESC>i
@@ -21,8 +25,6 @@ command W w
 command Q q
 command Wq wq
 command WQ wq
-
-syntax on
 
 colorscheme darkblack
 set t_Co=256
@@ -39,6 +41,8 @@ call plug#begin()
 	Plug 'alvan/vim-closetag'
 	Plug 'chrisbra/colorizer'
     Plug 'neoclide/coc.nvim', {'branch': 'release'}
+    Plug 'github/copilot.vim'
+    Plug 'tomlion/vim-solidity'
 "	Plug 'jaxbot/browserlink.vim'
 call plug#end()
 
@@ -49,7 +53,6 @@ call plug#end()
 let g:colorizer_auto_filetype = "css,html"
 
 "----- identify html file -----
-filetype plugin on
 let g:closetag_filenames = "*.html"
 let g:closetag_shortcut = ">"
 
