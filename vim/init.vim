@@ -12,6 +12,7 @@ set cindent
 set showcmd
 set noshowmode
 set mouse=a
+set noswapfile
 
 " auto pair
 inoremap ( ()<ESC>i
@@ -31,6 +32,7 @@ set t_Co=256
 set termguicolors
 hi LineNr guifg=#00ff00
 hi CursorLineNr guifg=#ffff00
+hi CopilotSuggestion guifg=#909090 guibg=#030303 gui=italic ctermfg=8 cterm=bold 
 
 " Call Plugins
 call plug#begin()
