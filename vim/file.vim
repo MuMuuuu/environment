@@ -34,7 +34,7 @@ fu! CPPDefault()
         call append(7 , "")
         call append(8 , "\treturn 0;")
         call append(9 , "}")
-        exec "6"
+        exec "8"
     endif
 endf
 
@@ -43,5 +43,20 @@ fu! ShDefault()
     if line("$") == 1
         call append(0 , "#!/bin/bash")
         call append(1 , "")
+    endif
+endf
+
+autocmd FileType java call JavaDefault()
+fu! JavaDefault()
+    if line("$") == 1
+        call append(0 , "import java.util.*;")
+        call append(1 , "import java.io.*;")
+        call append(2 , "")
+        call append(3 , "public class " . expand("%:t:r") . " {")
+        call append(4 , "\tpublic static void main(String[] args){")
+        call append(5 , "\t\t")
+        call append(6 , "\t}")
+        call append(7 , "}")
+        exec "5"
     endif
 endf
