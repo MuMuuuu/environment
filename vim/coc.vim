@@ -2,7 +2,10 @@ let g:coc_global_extensions = ["coc-clangd",
     \ "coc-pyright",
     \ "coc-sh" , 
     \ "coc-php-cs-fixer",
+    \ "coc-java",
     \ "coc-solidity"]
+
+# coc-java crashing issue : https://github.com/neoclide/coc-java/issues/99#issuecomment-663856695
 
 set updatetime=800
 set hidden

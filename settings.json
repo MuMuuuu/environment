@@ -27,11 +27,32 @@
                 "splitMode": "duplicate"
             },
             "keys": "alt+shift+d"
+        },
+        {
+            "command":
+            {
+                "action": "splitPane", 
+                "split": "vertical",
+                "splitMode" : "duplicate"
+            },
+            "keys": "alt+shift+plus"
+        },
+        {
+            "command":
+            {
+                "action": "splitPane",
+                "split": "horizontal",
+                "splitMode" : "duplicate"
+            },
+            "keys": "alt+shift+-"
         }
     ],
+    "alwaysShowTabs": false,
     "copyFormatting": "all",
     "copyOnSelect": true,
     "defaultProfile": "{c6eaf9f4-32a7-5fdc-b5cf-066e8a4b1e40}",
+    "disableAnimations": true,
+    "language": "en-US",
     "launchMode": "maximized",
     "profiles": 
     {
@@ -64,7 +85,7 @@
                 "font": 
                 {
                     "face": "Consolas",
-                    "size": 9
+                    "size": 7
                 },
                 "guid": "{c6eaf9f4-32a7-5fdc-b5cf-066e8a4b1e40}",
                 "hidden": false,
@@ -73,13 +94,21 @@
                 "padding": "2, 0, 0, 0",
                 "scrollbarState": "hidden",
                 "source": "Windows.Terminal.Wsl",
-                "startingDirectory": "%USERPROFILE%/Desktop"
+                "startingDirectory": "%USERPROFILE%/Desktop",
+                "suppressApplicationTitle": true,
+                "tabTitle": "Ubuntu 18.04"
             },
             {
                 "guid": "{b453ae62-4e3d-5e58-b989-0a998ec441b8}",
-                "hidden": false,
+                "hidden": true,
                 "name": "Azure Cloud Shell",
                 "source": "Windows.Terminal.Azure"
+            },
+            {
+                "guid": "{59b72ad2-09f7-55ec-af87-65d062af8472}",
+                "hidden": false,
+                "name": "Ubuntu 20.04.5 LTS",
+                "source": "CanonicalGroupLimited.Ubuntu20.04LTS_79rhkp1fndgsc"
             }
         ]
     },
@@ -268,6 +297,29 @@
             "selectionBackground": "#FFFFFF",
             "white": "#D3D7CF",
             "yellow": "#C4A000"
+        },
+        {
+            "background": "#300A24",
+            "black": "#171421",
+            "blue": "#0037DA",
+            "brightBlack": "#767676",
+            "brightBlue": "#08458F",
+            "brightCyan": "#2C9FB3",
+            "brightGreen": "#26A269",
+            "brightPurple": "#A347BA",
+            "brightRed": "#C01C28",
+            "brightWhite": "#F2F2F2",
+            "brightYellow": "#A2734C",
+            "cursorColor": "#FFFFFF",
+            "cyan": "#3A96DD",
+            "foreground": "#FFFFFF",
+            "green": "#26A269",
+            "name": "Ubuntu-20.04-ColorScheme",
+            "purple": "#881798",
+            "red": "#C21A23",
+            "selectionBackground": "#FFFFFF",
+            "white": "#CCCCCC",
+            "yellow": "#A2734C"
         },
         {
             "background": "#000000",

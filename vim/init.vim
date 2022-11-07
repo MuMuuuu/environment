@@ -21,6 +21,9 @@ inoremap {<CR> {<CR>}<ESC>ko
 inoremap [ []<ESC>i
 inoremap " ""<ESC>i
 inoremap ' ''<ESC>i
+inoremap <F2> <ESC>^i
+inoremap <F3> <ESC>$i
+nnoremap <F3> :noh <CR>
 
 command W w
 command Q q
@@ -47,6 +50,7 @@ call plug#begin()
     Plug 'tomlion/vim-solidity'
 "	Plug 'jaxbot/browserlink.vim'
 call plug#end()
+
 
 " ----------- airline -----------
 "let g:airline_theme='badwolf'
