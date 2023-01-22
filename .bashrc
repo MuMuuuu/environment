@@ -56,9 +56,15 @@ if [ -n "$force_color_prompt" ]; then
     fi
 fi
 
+# replace the default bash prompt with a shorter one
+function replace_pwd(){
+    local locate="${PWD//$HOME/'~'}"
+    local locate=${locate/$desk/DESKTOP}
+    echo $locate
+}
+
 if [ "$color_prompt" = yes ]; then
-    # Replace WSL Desktop path to "DESKTOP"
-    PS1='${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]${PWD/$desk/DESKTOP}\[\033[00m\]>> '
+    PS1='${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]$(replace_pwd)\[\033[00m\]>> '
 else
     PS1='${debian_chroot:+($debian_chroot)}\u@\h:\w\$ '
 fi
@@ -89,13 +95,14 @@ fi
 #export GCC_COLORS='error=01;31:warning=01;35:note=01;36:caret=01;32:locus=01:quote=01'
 
 # some aliases
-# Deleted SCIST host connection info
-alias ll='ls -alF'
-alias la='ls -A'
-alias l='ls -CF'
+# Delete sensitive ssh information
+alias ll='ls -alFh'
+alias la='ls -Ah'
+alias l='ls -CFh'
 alias vim='nvim'
 alias diff='diff --color -u'
 alias ..="cd .."
+alias open_dir="powershell.exe -Command 'explorer .'"
 
 
 # Add an "alert" alias for long running commands.  Use like so:
@@ -126,16 +133,14 @@ fi
 alias cl=clear
 eval $(thefuck --alias)
 
-
 # Load NVM
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
-# Deleted steam and fcu path
+# Delete sensitive path
 export desk="/mnt/c/Users/user/Desktop"
 export wsl_setting="/mnt/c/Users/user/AppData/Local/Packages/Microsoft.WindowsTerminal_8wekyb3d8bbwe/LocalState"
-
 
 # Windows Terminal duplicate pane in same path
 my_prompt() {
