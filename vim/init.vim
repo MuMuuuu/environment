@@ -24,11 +24,14 @@ inoremap ' ''<ESC>i
 inoremap <F2> <ESC>^i
 inoremap <F3> <ESC>$i
 nnoremap <F3> :noh <CR>
+nnoremap <F5> gg=G
 
 command W w
 command Q q
 command Wq wq
 command WQ wq
+command CP set nonumber norelativenumber mouse=
+command Cp set number relativenumber mouse=a
 
 colorscheme darkblack
 set t_Co=256
@@ -36,6 +39,7 @@ set termguicolors
 hi LineNr guifg=#00ff00
 hi CursorLineNr guifg=#ffff00
 hi CopilotSuggestion guifg=#909090 guibg=#030303 gui=italic ctermfg=8 cterm=bold 
+hi CocInlayHint guibg=#000000 guifg=#ffffff
 
 " Call Plugins
 call plug#begin()
@@ -47,7 +51,6 @@ call plug#begin()
 	Plug 'chrisbra/colorizer'
     Plug 'neoclide/coc.nvim', {'branch': 'release'}
     Plug 'github/copilot.vim'
-    Plug 'tomlion/vim-solidity'
 "	Plug 'jaxbot/browserlink.vim'
 call plug#end()
 
