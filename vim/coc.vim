@@ -31,3 +31,4 @@ endif
 
 hi Pmenu guifg=white guibg=#303030
 hi PmenuSel guifg=#f7fe44 guibg=#303030
+hi CocUnusedHighlight guibg=#a2faa3 guifg=#000000
