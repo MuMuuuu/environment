@@ -1,5 +1,3 @@
-# identity file types and append file header
-
 filetype on
 autocmd FileType c call CDefault()
 fu! CDefault()
@@ -18,7 +16,7 @@ endf
 autocmd FileType python call PyDefault()
 fu! PyDefault()
     if line("$") == 1
-        call append(0 , "#!/usr/bin/python3.8")
+        call append(0 , "#!/usr/bin/python3.10")
         call append(1 , "")
     endif
 endf

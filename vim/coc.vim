@@ -2,8 +2,7 @@ let g:coc_global_extensions = ["coc-clangd",
     \ "coc-pyright",
     \ "coc-sh" , 
     \ "coc-php-cs-fixer",
-    \ "coc-java",
-    \ "coc-solidity"]
+    \ "coc-java"]
 
 " coc-java crashing issue : https://github.com/neoclide/coc-java/issues/99#issuecomment-663856695
 
@@ -31,4 +30,4 @@ endif
 
 hi Pmenu guifg=white guibg=#303030
 hi PmenuSel guifg=#f7fe44 guibg=#303030
-hi CocUnusedHighlight guibg=#a2faa3 guifg=#000000
+hi CocInlayHint guibg=#6a6a6a guifg=#161616 gui=italic

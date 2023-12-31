@@ -30,8 +30,6 @@ command W w
 command Q q
 command Wq wq
 command WQ wq
-command CP set nonumber norelativenumber mouse=
-command Cp set number relativenumber mouse=a
 
 colorscheme darkblack
 set t_Co=256
@@ -39,24 +37,18 @@ set termguicolors
 hi LineNr guifg=#00ff00
 hi CursorLineNr guifg=#ffff00
 hi CopilotSuggestion guifg=#909090 guibg=#030303 gui=italic ctermfg=8 cterm=bold 
-hi CocInlayHint guibg=#000000 guifg=#ffffff
+
 
 " Call Plugins
 call plug#begin()
 	Plug 'scrooloose/nerdtree'
 	Plug 'vim-airline/vim-airline'
 	Plug 'vim-airline/vim-airline-themes'
-	Plug 'petRUShka/vim-sage'
 	Plug 'alvan/vim-closetag'
 	Plug 'chrisbra/colorizer'
     Plug 'neoclide/coc.nvim', {'branch': 'release'}
     Plug 'github/copilot.vim'
-"	Plug 'jaxbot/browserlink.vim'
 call plug#end()
-
-
-" ----------- airline -----------
-"let g:airline_theme='badwolf'
 
 " ------- colorizer ---------
 let g:colorizer_auto_filetype = "css,html"
