@@ -30,6 +30,9 @@ command W w
 command Q q
 command Wq wq
 command WQ wq
+command CP set nonumber norelativenumber mouse=
+command Cp set number relativenumber mouse=a
+command! wQ wq
 
 colorscheme darkblack
 set t_Co=256
