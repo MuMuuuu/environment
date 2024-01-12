@@ -103,6 +103,7 @@ alias vim='nvim'
 alias diff='diff --color -u'
 alias ..="cd .."
 alias open_dir="powershell.exe -Command 'explorer .'"
+export IP="[\d]{1,3}\.[\d]{1,3}\.[\d]{1,3}\.[\d]{1,3}"
 
 
 # Add an "alert" alias for long running commands.  Use like so:
