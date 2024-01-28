@@ -1,6 +1,0 @@
-#!/usr/bin/env bash
-
-in=$(< /dev/stdin)
-
-echo $in | tr "[a-zA-Z]" "[n-za-mN-ZA-M]"
-

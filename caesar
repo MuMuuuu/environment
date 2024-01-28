@@ -1,0 +1,9 @@
+#!/bin/bash
+
+in=$(< /dev/stdin)
+key=$((($1 -1) % 26))
+alpha=("abcdefghijklmnopqrstuvwxyza" "ABCDEFGHIJKLMNOPQRSTUVWXYZA")
+ori="[a-${alpha[0]:$key:1}${alpha[0]:$key+1:1}-zA-${alpha[1]:$key:1}${alpha[1]:$key+1:1}-Z]"
+new="[${alpha[0]:$key+1:1}-za-${alpha[0]:$key:1}${alpha[1]:$key+1:1}-ZA-${alpha[1]:$key:1}]"
+
+echo $in | tr "$ori" "$new"
