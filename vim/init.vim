@@ -30,9 +30,9 @@ command W w
 command Q q
 command Wq wq
 command WQ wq
-command CP set nonumber norelativenumber mouse=
-command Cp set number relativenumber mouse=a
-command! wQ wq
+command CP set norelativenumber nonumber mouse=
+command Cp set relativenumber number mouse=a
+
 
 colorscheme darkblack
 set t_Co=256
@@ -68,3 +68,11 @@ for i in g:config_list
     execute "source " . g:config_path . i
 endfor
 
+function Dogkiller()
+    let l:digust = ["( ", " )", "{ ", " }", "[ ", " ]"]
+    let l:clean = ["(", ")", "{", "}", "[", "]"]
+    for i in range(len(l:digust))
+        execute ":%s/" . l:digust[i] . "/" . l:clean[i] . "/g"
+    endfor
+endfunction
+nnoremap <F10> :silent! call Dogkiller()<CR>
