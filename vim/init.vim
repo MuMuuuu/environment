@@ -72,7 +72,7 @@ function Dogkiller()
     let l:digust = ["( ", " )", "{ ", " }", "[ ", " ]"]
     let l:clean = ["(", ")", "{", "}", "[", "]"]
     for i in range(len(l:digust))
-        execute ":%s/" . l:digust[i] . "/" . l:clean[i] . "/g"
+        execute ":%s/\\" . l:digust[i] . "/" . l:clean[i] . "/g"
     endfor
 endfunction
 nnoremap <F10> :silent! call Dogkiller()<CR>
